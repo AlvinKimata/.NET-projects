@@ -1,0 +1,44 @@
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\bin\Debug\net5.0\appsettings.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\bin\Debug\net5.0\Aspnet core Identity.exe
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\bin\Debug\net5.0\Aspnet core Identity.deps.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\bin\Debug\net5.0\Aspnet core Identity.runtimeconfig.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\bin\Debug\net5.0\Aspnet core Identity.runtimeconfig.dev.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\bin\Debug\net5.0\Aspnet core Identity.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\bin\Debug\net5.0\Aspnet core Identity.pdb
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\bin\Debug\net5.0\Aspnet core Identity.Views.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\bin\Debug\net5.0\Aspnet core Identity.Views.pdb
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.csproj.AssemblyReference.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.AssemblyInfoInputs.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.AssemblyInfo.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.csproj.CoreCompileInputs.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.RazorAssemblyInfo.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.RazorAssemblyInfo.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\scopedcss\bundle\Aspnet core Identity.styles.css
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\Aspnet core Identity.StaticWebAssets.Manifest.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\Aspnet core Identity.StaticWebAssets.Pack.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\msbuild.Aspnet core Identity.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\msbuild.build.Aspnet core Identity.props
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.Aspnet core Identity.props
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.Aspnet core Identity.props
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.TagHelpers.input.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.TagHelpers.output.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.RazorCoreGenerate.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.RazorTargetAssemblyInfo.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.RazorTargetAssemblyInfo.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.Views.pdb
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\refint\Aspnet core Identity.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.pdb
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.genruntimeconfig.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\ref\Aspnet core Identity.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\Web-App-development-with-ASP.Net-and-Angular\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.csproj.CopyComplete
