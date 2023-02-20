@@ -117,3 +117,4 @@ C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Id
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.pdb
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.genruntimeconfig.cache
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\ref\Aspnet core Identity.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\Register.cshtml.g.cs
