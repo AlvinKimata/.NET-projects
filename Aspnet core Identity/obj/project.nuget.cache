@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3uoKBeU7oeilL/yUNk9F2IgSKz8WswxuVrDpU8xElyl+oDY2N8n7oeRNIU274GCx4tZSVhEozQBMTsZesjHmbA==",
+  "dgSpecHash": "6kEvRMaVYZII8qXrWm8Ygc76LN8D1L9BooWcouq/06Tvz/Gb4OJ5gPu029wjd7PNf9P7irAq2FSCy8X3gwRmSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\Web-App-development-with-ASP.Net-and-Angular\\Aspnet core Identity\\Aspnet core Identity.csproj",
+  "projectFilePath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\Aspnet core Identity\\Aspnet core Identity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\debonair\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\debonair\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",

@@ -6221,11 +6221,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\Web-App-development-with-ASP.Net-and-Angular\\Aspnet core Identity\\Aspnet core Identity.csproj",
+      "projectUniqueName": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\Aspnet core Identity\\Aspnet core Identity.csproj",
       "projectName": "Aspnet core Identity",
-      "projectPath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\Web-App-development-with-ASP.Net-and-Angular\\Aspnet core Identity\\Aspnet core Identity.csproj",
+      "projectPath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\Aspnet core Identity\\Aspnet core Identity.csproj",
       "packagesPath": "C:\\Users\\debonair\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\Web-App-development-with-ASP.Net-and-Angular\\Aspnet core Identity\\obj\\",
+      "outputPath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\Aspnet core Identity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\debonair\\AppData\\Roaming\\NuGet\\NuGet.Config",
