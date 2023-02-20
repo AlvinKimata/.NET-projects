@@ -11,6 +11,7 @@ namespace Aspnet_core_Identity.Pages
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
 
+        [BindProperty]
         public Register Model { get; set; }
 
         public RegisterModel(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
