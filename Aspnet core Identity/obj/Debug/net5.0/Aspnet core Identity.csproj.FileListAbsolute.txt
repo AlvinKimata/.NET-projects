@@ -120,3 +120,10 @@ C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Id
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\Register.cshtml.g.cs
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\bin\Debug\net5.0\Microsoft.AspNet.Identity.Core.dll
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\Login.cshtml.g.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\bin\Debug\net5.0\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\bin\Debug\net5.0\Microsoft.Owin.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\bin\Debug\net5.0\Microsoft.Owin.Security.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\bin\Debug\net5.0\Microsoft.Owin.Security.Cookies.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\bin\Debug\net5.0\Microsoft.Owin.Security.OAuth.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\bin\Debug\net5.0\Owin.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\Logout.cshtml.g.cs
