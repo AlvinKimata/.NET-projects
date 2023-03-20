@@ -93,11 +93,6 @@ C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Id
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.RazorAssemblyInfo.cs
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\scopedcss\bundle\Aspnet core Identity.styles.css
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\Aspnet core Identity.StaticWebAssets.Manifest.cache
-C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\Aspnet core Identity.StaticWebAssets.Pack.cache
-C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\msbuild.Aspnet core Identity.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\msbuild.build.Aspnet core Identity.props
-C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.Aspnet core Identity.props
-C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.Aspnet core Identity.props
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.TagHelpers.input.cache
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.TagHelpers.output.cache
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.RazorCoreGenerate.cache
@@ -113,7 +108,6 @@ C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Id
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.Views.pdb
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.csproj.CopyComplete
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.dll
-C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\refint\Aspnet core Identity.dll
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.pdb
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Aspnet core Identity.genruntimeconfig.cache
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\ref\Aspnet core Identity.dll
@@ -128,3 +122,5 @@ C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Id
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\bin\Debug\net5.0\Owin.dll
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\Logout.cshtml.g.cs
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\Razor\Pages\ResetPassword.cshtml.g.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\bin\Debug\net5.0\ref\Aspnet core Identity.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\Aspnet core Identity\obj\Debug\net5.0\staticwebassets\Aspnet core Identity.StaticWebAssets.xml
