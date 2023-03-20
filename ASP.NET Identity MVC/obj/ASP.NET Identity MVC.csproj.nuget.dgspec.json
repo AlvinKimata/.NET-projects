@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\debonair\\source\\repos\\ASP.NET Identity MVC\\ASP.NET Identity MVC.csproj": {}
+    "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\ASP.NET Identity MVC\\ASP.NET Identity MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\debonair\\source\\repos\\ASP.NET Identity MVC\\ASP.NET Identity MVC.csproj": {
+    "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\ASP.NET Identity MVC\\ASP.NET Identity MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\debonair\\source\\repos\\ASP.NET Identity MVC\\ASP.NET Identity MVC.csproj",
+        "projectUniqueName": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\ASP.NET Identity MVC\\ASP.NET Identity MVC.csproj",
         "projectName": "ASP.NET Identity MVC",
-        "projectPath": "C:\\Users\\debonair\\source\\repos\\ASP.NET Identity MVC\\ASP.NET Identity MVC.csproj",
+        "projectPath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\ASP.NET Identity MVC\\ASP.NET Identity MVC.csproj",
         "packagesPath": "C:\\Users\\debonair\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\debonair\\source\\repos\\ASP.NET Identity MVC\\obj\\",
+        "outputPath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\ASP.NET Identity MVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\debonair\\AppData\\Roaming\\NuGet\\NuGet.Config",

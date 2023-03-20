@@ -1,0 +1,31 @@
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\bin\Debug\net6.0\appsettings.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\bin\Debug\net6.0\ASP.NET Identity MVC.staticwebassets.runtime.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\bin\Debug\net6.0\ASP.NET Identity MVC.exe
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\bin\Debug\net6.0\ASP.NET Identity MVC.deps.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\bin\Debug\net6.0\ASP.NET Identity MVC.runtimeconfig.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\bin\Debug\net6.0\ASP.NET Identity MVC.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\bin\Debug\net6.0\ASP.NET Identity MVC.pdb
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.csproj.AssemblyReference.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.AssemblyInfoInputs.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.AssemblyInfo.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.csproj.CoreCompileInputs.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.RazorAssemblyInfo.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.RazorAssemblyInfo.cs
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\staticwebassets\msbuild.ASP.NET Identity MVC.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\staticwebassets\msbuild.build.ASP.NET Identity MVC.props
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ASP.NET Identity MVC.props
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ASP.NET Identity MVC.props
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\scopedcss\bundle\ASP.NET Identity MVC.styles.css
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\scopedcss\projectbundle\ASP.NET Identity MVC.bundle.scp.css
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\refint\ASP.NET Identity MVC.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.pdb
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.genruntimeconfig.cache
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ref\ASP.NET Identity MVC.dll
