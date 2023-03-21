@@ -2,9 +2,9 @@
 {
     public class SqlIdentityRepository : IdentityRepository
     { 
-        private readonly IdentityDbContext context;
+        private readonly ProjectDbContext context;
 
-        public SqlIdentityRepository(IdentityDbContext context) 
+        public SqlIdentityRepository(ProjectDbContext context) 
         {
             this.context = context;
         }
@@ -18,13 +18,13 @@
 
         public Employees Delete(int Id)
         {
-        Employees employees = context.Employees.Find(Id);
-        if (employees != null)
+        Employees employee = context.Employees.Find(Id);
+        if (employee != null)
         {
-            context.Employees.Remove(employees);
+            context.Employees.Remove(employee);
             context.SaveChanges();
         }
-            return employees;
+            return employee;
         }
 
         public IEnumerable<Employees> GetEmployees()
