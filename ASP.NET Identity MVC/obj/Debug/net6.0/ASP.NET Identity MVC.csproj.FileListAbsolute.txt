@@ -29,3 +29,4 @@ C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identi
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.pdb
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ASP.NET Identity MVC.genruntimeconfig.cache
 C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\obj\Debug\net6.0\ref\ASP.NET Identity MVC.dll
+C:\Users\debonair\OneDrive\Documents\web_app_dev\ASP.Net-projects\ASP.NET Identity MVC\bin\Debug\net6.0\libman.json
