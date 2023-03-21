@@ -1,4 +1,5 @@
 ﻿using ASP.NET_Identity_MVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASP.NET_Identity_MVC
 {
@@ -15,7 +16,7 @@ namespace ASP.NET_Identity_MVC
         {
             //DB connection.
             var connection = _config.GetConnectionString("IdentityDBConnect");
-            services.AddDbContextPool<IdentityDbContext>(options => options.UseSqlServer(_config.GetConnectionString("IdentityConnect"));
+            services.AddDbContextPool<IdentityDbContext>(options => options.UseSqlServer(_config.GetConnectionString("IdentityConnect")));
             services.AddMvc();
         }
     }
