@@ -6,27 +6,17 @@ namespace ASP.NET_Identity_MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private IdentityRepository _identityRepository;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
+        public HomeController(IdentityRepository identityRepository)
+        { 
+            _identityRepository = identityRepository;
         }
 
-        public IActionResult Index()
+       public ViewResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var model = _identityRepository.GetEmployees();
+            return View(model);
         }
     }
 }
