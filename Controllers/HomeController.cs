@@ -7,11 +7,10 @@ namespace User_management.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IUserRepository _userRepository;
 
-        public HomeController(IUserRepository userRepository)
+        public HomeController(ILogger<HomeController> logger)
         {
-            _userRepository = userRepository;
+            _logger = logger;
         }
         public IActionResult Privacy()
         {
@@ -20,13 +19,7 @@ namespace User_management.Controllers
 
         public ViewResult Index()
         {
-            var model = _userRepository.GetAllUsers();
-            return View(model);
-        }
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
+            return View();
         }
 
 

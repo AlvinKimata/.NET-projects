@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
 namespace User_management.ViewModels
 {
-    public class RegisterUsersViewModel
+    public class RegisterUsersViewModel 
     {
         [Required]
         public string Name { get; set; }    
