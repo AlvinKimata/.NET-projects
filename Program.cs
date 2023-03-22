@@ -16,7 +16,6 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 builder.Services.AddScoped<UserManager<IdentityUser>>();
 
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
