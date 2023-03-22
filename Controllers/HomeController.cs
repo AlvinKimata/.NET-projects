@@ -6,18 +6,23 @@ namespace User_management.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        private readonly ILogger<HomeController> _logger;
+        private readonly IUserRepository _userRepository;
 
+        public HomeController(IUserRepository userRepository)
+        {
+            _userRepository = userRepository;
+        }
         public IActionResult Privacy()
         {
             return View();
         }
 
-
-        private readonly ILogger<HomeController> _logger;
+        public ViewResult Index()
+        {
+            var model = _userRepository.GetAllUsers();
+            return View(model);
+        }
 
         public HomeController(ILogger<HomeController> logger)
         {
