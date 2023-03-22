@@ -25,6 +25,7 @@ namespace User_management.Controllers
         {
             return View();
         }
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -38,7 +39,7 @@ namespace User_management.Controllers
             {
                 var user = new IdentityUser
                 {
-                    UserName = model.Name,
+                    UserName = model.Email,
                     Email = model.Email,
                 };
 
@@ -47,7 +48,7 @@ namespace User_management.Controllers
                 if (result.Succeeded)
                 {
                     await signInManager.SignInAsync(user, isPersistent: true);
-                    return RedirectToAction("index", "home");
+                    return RedirectToAction("Index", "home");
                 }
 
                 //Print errors if any.

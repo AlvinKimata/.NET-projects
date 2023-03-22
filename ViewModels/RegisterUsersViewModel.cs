@@ -6,8 +6,7 @@ namespace User_management.ViewModels
 {
     public class RegisterUsersViewModel 
     {
-        [Required]
-        public string Name { get; set; }    
+         
         [Required]
         [EmailAddress]
         [Remote(action: "IsEmailInUse", controller: "Account")]
