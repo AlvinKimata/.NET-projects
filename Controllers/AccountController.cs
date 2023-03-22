@@ -13,10 +13,20 @@ namespace User_management.Controllers
             _userRepository = userRepository;
         }
 
+        public IActionResult Register()
+        {
+            return View();
+        }
         public ViewResult Index()
         {
             var model = _userRepository.GetAllUsers();
             return View(model);
+        }
+
+        public ViewResult Details(int Id)
+        {
+            var user = _userRepository.GetUser(Id);
+            return View(user);
         }
     }
 }
