@@ -20,7 +20,5 @@ namespace User_management.Models
         {
             base.OnModelCreating(builder);
         }
-
-        public DbSet<User> Users { get; set; }
     }
 }
