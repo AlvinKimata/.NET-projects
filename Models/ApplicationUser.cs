@@ -4,6 +4,6 @@ namespace User_management.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        public string UserName { get; set; }
+        public override string UserName { get; set; }
     }
 }

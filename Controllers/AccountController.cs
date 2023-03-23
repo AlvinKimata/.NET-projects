@@ -56,10 +56,52 @@ namespace User_management.Controllers
             return View();
         }
 
+
+        [HttpGet]
+        public IActionResult ListUsers()
+        {
+            var users = userManager.Users;
+            return View(users);
+        }
+
+
         [HttpGet]
         public IActionResult Register()
         {
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(UserCreateViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser
+                {
+                    UserName = model.UserName,
+                    Email = model.Email
+                };
+
+                var result = await userManager.CreateAsync(user);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("listusers", "account");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+
+            }
+            return View(model);
         }
 
         [HttpPost]  
@@ -88,11 +130,6 @@ namespace User_management.Controllers
                 }
             }
             return View(model);
-        }
-
-        public  IActionResult ListUsers()
-        {
-            return View();
         }
 
         //Get individual details

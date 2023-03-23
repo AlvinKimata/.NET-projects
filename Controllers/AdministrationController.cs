@@ -7,16 +7,21 @@ namespace User_management.Controllers
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
+        private readonly UserManager<IdentityUser> userManager;
 
-        public AdministrationController(RoleManager <IdentityRole> roleManager)
+        public AdministrationController(RoleManager <IdentityRole> roleManager,
+                                       UserManager<IdentityUser> userManager)
         {
             this.roleManager = roleManager;
+            this.userManager = userManager;
         }
         [HttpGet]
         public IActionResult CreateRole()
         {
             return View();
         }
+
+        
 
         [HttpPost]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
