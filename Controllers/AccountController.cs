@@ -21,6 +21,12 @@ namespace User_management.Controllers
             _context = context;
         }
 
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
