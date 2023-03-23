@@ -8,12 +8,12 @@ namespace User_management.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
-        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly SignInManager<ApplicationUser> signInManager;
         private readonly AppDbContext _context;
 
-        public AccountController(UserManager<IdentityUser> userManager,
-                                 SignInManager<IdentityUser> signInManager,  
+        public AccountController(UserManager<ApplicationUser> userManager,
+                                 SignInManager<ApplicationUser> signInManager,  
                                  AppDbContext context)
         {
             this.userManager = userManager;
@@ -67,7 +67,7 @@ namespace User_management.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser
+                var user = new ApplicationUser
                 {
                     UserName = model.Email,
                     Email = model.Email,
@@ -103,7 +103,7 @@ namespace User_management.Controllers
                 return NotFound();
             }
 
-            var user = await _context.Users.FirstOrDefaultAsync(m => int.Parse(m.Id) == id);
+            var user = await _context.Users.FirstOrDefaultAsync(m => m.Id == id);
 
             if (user == null)
             {
@@ -139,7 +139,7 @@ namespace User_management.Controllers
 
 
             var employee = await _context.Users
-                .FirstOrDefaultAsync(m => int.Parse(m.Id) == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (employee == null)
             {
                 return NotFound();
