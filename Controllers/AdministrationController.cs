@@ -33,7 +33,7 @@ namespace User_management.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("index", "home");
                 }
 
                 foreach (IdentityError error in result.Errors)

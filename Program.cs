@@ -12,8 +12,8 @@ builder.Services.AddDbContext<AppDbContext>();
 
 //Register identity services to the container.
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-     .AddEntityFrameworkStores<AppDbContext>()
-     .AddDefaultTokenProviders();
+     .AddEntityFrameworkStores<AppDbContext>();
+     //.AddDefaultTokenProviders();
 
 builder.Services.AddScoped<UserManager<ApplicationUser>>();
 
@@ -33,8 +33,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseAuthentication();
 
 app.MapControllerRoute(
     name: "default",
