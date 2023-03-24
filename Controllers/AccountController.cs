@@ -92,7 +92,7 @@ namespace User_management.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("listusers", "account");
+                    return RedirectToAction("index", "home");
                 }
 
                 foreach (var error in result.Errors)

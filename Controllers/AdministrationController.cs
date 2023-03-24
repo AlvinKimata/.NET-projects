@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using User_management.Models;
 using User_management.ViewModels;
 
 namespace User_management.Controllers
@@ -7,10 +8,10 @@ namespace User_management.Controllers
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
-        private readonly UserManager<IdentityUser> userManager;
+        private readonly UserManager<ApplicationUser> userManager;
 
         public AdministrationController(RoleManager <IdentityRole> roleManager,
-                                       UserManager<IdentityUser> userManager)
+                                       UserManager<ApplicationUser> userManager)
         {
             this.roleManager = roleManager;
             this.userManager = userManager;
@@ -21,7 +22,56 @@ namespace User_management.Controllers
             return View();
         }
 
-        
+        [HttpGet]
+        public async Task<IActionResult> Edit(string id)
+        {
+            var user = await userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                ViewBag.ErrorMessage = $"User with id {id} cannot be found";
+                return View("NotFound");
+            }
+
+            var model = new EditUserViewModel
+            {
+                Id = user.Id,
+                Email = user.Email,
+                UserName = user.UserName,
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(EditUserViewModel model)
+        {
+            var user = await userManager.FindByIdAsync(model.Id.ToString());
+
+            if (user == null)
+            {
+                ViewBag.ErrorMessage = $"User with Id = {model.Id} cannot be found";
+                return View("NotFound");
+            }
+            else
+            {
+                user.Email = model.Email;
+                user.UserName = model.UserName;
+
+                var result = await userManager.UpdateAsync(user);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("ListUsers");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+
+                return View(model);
+            }
+        }
 
         [HttpPost]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
