@@ -34,7 +34,7 @@ namespace User_management.Controllers
 
             var model = new EditUserViewModel
             {
-                Id = user.Id,
+                Name = user.UserName,
                 Email = user.Email
             };
 
@@ -44,7 +44,7 @@ namespace User_management.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(EditUserViewModel model)
         {
-            var user = await userManager.FindByIdAsync(model.Id.ToString());
+            var user = await userManager.FindByIdAsync(model.Name);
 
             if (user == null)
             {
@@ -53,8 +53,9 @@ namespace User_management.Controllers
             }
             else
             {
+                user.UserName = model.Name;
                 user.Email = model.Email;
-                user.UserName = model.Email;
+                
 
                 var result = await userManager.UpdateAsync(user);
 

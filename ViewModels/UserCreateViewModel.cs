@@ -4,8 +4,7 @@ namespace User_management.ViewModels
 {
     public class UserCreateViewModel
     {
-        [Required]  
-        public string? Id { get; set; }
+        public string? Name { get; set; }
         [Required]
         public string? Email { get; set; }
 
