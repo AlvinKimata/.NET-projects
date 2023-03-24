@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<ApplicationUser> SignInManager
+@inject SignInManager<IdentityUser> signInManager
 
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@
                     </ul>
 
                     @*If the user is signed in display logout link *@
-                    @if (SignInManager.IsSignedIn(User))
+                    @if (signInManager.IsSignedIn(User))
                     {
                         <link class="nav-item">
                         <form method="post" asp-controller="account" asp-action="logout">

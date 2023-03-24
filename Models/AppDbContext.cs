@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace User_management.Models
 {
-    public class AppDbContext : IdentityDbContext<ApplicationUser>
+    public class AppDbContext : IdentityDbContext
     {
         protected readonly IConfiguration configuration;
 

@@ -8,10 +8,10 @@ namespace User_management.Controllers
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
-        private readonly UserManager<ApplicationUser> userManager;
+        private readonly UserManager<IdentityUser> userManager;
 
         public AdministrationController(RoleManager <IdentityRole> roleManager,
-                                       UserManager<ApplicationUser> userManager)
+                                       UserManager<IdentityUser> userManager)
         {
             this.roleManager = roleManager;
             this.userManager = userManager;
@@ -35,8 +35,7 @@ namespace User_management.Controllers
             var model = new EditUserViewModel
             {
                 Id = user.Id,
-                Email = user.Email,
-                UserName = user.UserName,
+                Email = user.Email
             };
 
             return View(model);
@@ -55,7 +54,7 @@ namespace User_management.Controllers
             else
             {
                 user.Email = model.Email;
-                user.UserName = model.UserName;
+                user.UserName = model.Email;
 
                 var result = await userManager.UpdateAsync(user);
 

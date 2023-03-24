@@ -8,12 +8,12 @@ namespace User_management.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<ApplicationUser> userManager;
-        private readonly SignInManager<ApplicationUser> signInManager;
+        private readonly UserManager<IdentityUser> userManager;
+        private readonly SignInManager<IdentityUser> signInManager;
         private readonly AppDbContext _context;
 
-        public AccountController(UserManager<ApplicationUser> userManager,
-                                 SignInManager<ApplicationUser> signInManager,  
+        public AccountController(UserManager<IdentityUser> userManager,
+                                 SignInManager<IdentityUser> signInManager,  
                                  AppDbContext context)
         {
             this.userManager = userManager;
@@ -82,9 +82,9 @@ namespace User_management.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser
+                var user = new IdentityUser
                 {
-                    UserName = model.UserName,
+                    UserName = model.Email,
                     Email = model.Email
                 };
 
@@ -109,7 +109,7 @@ namespace User_management.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser
+                var user = new IdentityUser
                 {
                     UserName = model.Email,
                     Email = model.Email,
