@@ -12,13 +12,17 @@ namespace User_management.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
+        private readonly RoleManager<IdentityUser> roleManager;
         private readonly AppDbContext _context;
 
         public AccountController(UserManager<IdentityUser> userManager,
-                                 SignInManager<IdentityUser> signInManager,AppDbContext context)
+                                 SignInManager<IdentityUser> signInManager,
+                                 RoleManager<IdentityUser> roleManager,
+                                 AppDbContext context)
         {
             this.userManager = userManager;
-            this.signInManager = signInManager; 
+            this.signInManager = signInManager;
+            this.roleManager = roleManager;
             _context = context;
         }
 
@@ -29,6 +33,7 @@ namespace User_management.Controllers
             var users = userManager.Users;
             return View(users);
         }
+      
 
         [HttpGet]
         [AllowAnonymous]
