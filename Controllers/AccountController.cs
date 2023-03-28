@@ -141,7 +141,7 @@ namespace User_management.Controllers
                 Response.StatusCode = 404;
                 return View("NotFound", id);
             }
-            var model = new HomeDetailsViewModel
+            var model = new User
             {
                 Name = user.UserName,
                 Email = user.Email
