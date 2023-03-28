@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using User_management.Models;
 using User_management.ViewModels;
 
@@ -13,8 +15,7 @@ namespace User_management.Controllers
         private readonly AppDbContext _context;
 
         public AccountController(UserManager<IdentityUser> userManager,
-                                 SignInManager<IdentityUser> signInManager,  
-                                 AppDbContext context)
+                                 SignInManager<IdentityUser> signInManager,AppDbContext context)
         {
             this.userManager = userManager;
             this.signInManager = signInManager; 
@@ -22,12 +23,22 @@ namespace User_management.Controllers
         }
 
         [HttpGet]
+
+        public IActionResult ListUsers()
+        {
+            var users = userManager.Users;
+            return View(users);
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
@@ -45,27 +56,15 @@ namespace User_management.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
             return RedirectToAction("index", "home");
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-
         [HttpGet]
-        public IActionResult ListUsers()
-        {
-            var users = userManager.Users;
-            return View(users);
-        }
-
-
-        [HttpGet]
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
@@ -104,7 +103,7 @@ namespace User_management.Controllers
             return View(model);
         }
 
-        [HttpPost]  
+        [HttpPost]
         public async Task<IActionResult> Register(RegisterUsersViewModel model)
         {
             if (ModelState.IsValid)
@@ -133,37 +132,22 @@ namespace User_management.Controllers
         }
 
         //Get individual details
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
-            if (id == null || _context.Users == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _context.Users.FirstOrDefaultAsync(m => m.Id == id);
+            var user = await userManager.FindByIdAsync(id);
 
             if (user == null)
             {
-                return NotFound();
+                Response.StatusCode = 404;
+                return View("NotFound", id);
             }
-
-            return View(user);
-        }
-
-        //Edit User details.
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Users == null)
+            var model = new HomeDetailsViewModel
             {
-                return NotFound();
-            }
+                Name = user.UserName,
+                Email = user.Email
+            };
 
-            var employee = await _context.Users.FindAsync(id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-            return View(employee);
+            return View(model);
         }
 
         // Delete a user.

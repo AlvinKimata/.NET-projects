@@ -1,0 +1,29 @@
+﻿@model HomeDetailsViewModel
+
+@{
+    ViewBag.Title = "User details";
+}
+
+<div class="card-deck">
+    <div class="row justify-content-center m-3">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1>@Model.Name</h1>
+                </div>
+
+                <div class="card-body text-center">
+                    <h4>Employee ID : @Model.Id</h4>
+                    <h4>Email : @Model.Email</h4>
+                </div>
+
+                <div class="card-footer text-center">
+                    <a asp-controller="home" asp-action="index" class="btn btn-primary">Back</a>
+                    <a asp-action="edit" asp-controller="home"
+                       asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+                    <a class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

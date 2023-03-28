@@ -1,21 +1,18 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> signInManager
 
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - User_management</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/User_management.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+        <div class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <nav class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">User_management</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -35,9 +32,13 @@
                     @if (signInManager.IsSignedIn(User))
                     {
                         <link class="nav-item">
-                        <form method="post" asp-controller="account" asp-action="logout">
+                        <form method="post" asp-controller="home" asp-action="logout">
                             <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">Logout @User.Identity.Name</button>
                         </form>
+
+                        <div class="nav-item">
+                        <a asp-controller="account" asp-action="ListUsers" class="btn btn-primary m-1">View Users</a>
+                        </div>
                     }
                     else
                     {
@@ -52,9 +53,11 @@
                         </ul>
                     }
 
-                </div>
             </div>
-        </nav>
+            </nav>
+        </div>
+        
+    
     </header>
     <div class="container">
         <main role="main" class="pb-3">
