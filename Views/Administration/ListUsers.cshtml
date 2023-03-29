@@ -25,7 +25,10 @@
                     </div>
                     <div class="card-footer">
                         <a href="#" class="btn btn-danger">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+
+                        <form method="post" asp-action="DeleteUser" asp-route-id="@user.Id">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
                     </div>
                 </div>
     }
