@@ -331,7 +331,7 @@ namespace User_management.Controllers
                 return View(model);
             }
 
-            result = await userManager.AddToRolesAsync(user, model.Where(x => x.IsSelected).Select(y => y.UserName));
+            result = await userManager.AddToRolesAsync(user, model.Where(x => x.IsSelected).Select(y => y.RoleName));
 
 
             if (!result.Succeeded)
