@@ -2018,11 +2018,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\debonair\\source\\repos\\SalesCRMApplication\\SalesCRMApplication.csproj",
+      "projectUniqueName": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\SalesCRMApplication\\SalesCRMApplication.csproj",
       "projectName": "SalesCRMApplication",
-      "projectPath": "C:\\Users\\debonair\\source\\repos\\SalesCRMApplication\\SalesCRMApplication.csproj",
+      "projectPath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\SalesCRMApplication\\SalesCRMApplication.csproj",
       "packagesPath": "C:\\Users\\debonair\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\debonair\\source\\repos\\SalesCRMApplication\\obj\\",
+      "outputPath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\SalesCRMApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\debonair\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AlbDUyntTpwwQC6DIUiad+57adI4vLwulvlV900m2yacuIa2B7WPAnTyOPKtf9xhuzN5JgWGrd0ftIe0ZmG9dg==",
+  "dgSpecHash": "2F0FWSVlerOXE5+4V7ZeBiRauHqTTq613JdV00YJuIZXSenQdQP7dFG/sL+7vRQjcSc2OCexNyzk0egWtgwB4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\debonair\\source\\repos\\SalesCRMApplication\\SalesCRMApplication.csproj",
+  "projectFilePath": "C:\\Users\\debonair\\OneDrive\\Documents\\web_app_dev\\ASP.Net-projects\\SalesCRMApplication\\SalesCRMApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\debonair\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\debonair\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
