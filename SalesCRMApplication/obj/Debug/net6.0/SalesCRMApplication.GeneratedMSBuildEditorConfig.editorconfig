@@ -24,6 +24,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/debonair/OneDrive/Documents/web_app_dev/ASP.Net-projects/SalesCRMApplication/Views/SalesLeadEntities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNMZWFkRW50aXRpZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/debonair/OneDrive/Documents/web_app_dev/ASP.Net-projects/SalesCRMApplication/Views/SalesLeadEntities/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNMZWFkRW50aXRpZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/debonair/OneDrive/Documents/web_app_dev/ASP.Net-projects/SalesCRMApplication/Views/SalesLeadEntities/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNMZWFkRW50aXRpZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/debonair/OneDrive/Documents/web_app_dev/ASP.Net-projects/SalesCRMApplication/Views/SalesLeadEntities/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNMZWFkRW50aXRpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/debonair/OneDrive/Documents/web_app_dev/ASP.Net-projects/SalesCRMApplication/Views/SalesLeadEntities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNMZWFkRW50aXRpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/debonair/OneDrive/Documents/web_app_dev/ASP.Net-projects/SalesCRMApplication/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
