@@ -2,23 +2,26 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Image Generator</h1>
-    <br />
-    <input type="text" class="form-control" id="txt" style="width:400px;" placeholder="Image Description" />
-    <br />
+<h1 class="display-4">DALL-E API in .NET</h1>
+<!--Text area for the prompt text-->
+<textarea class="form-control" id="txt" style="width:500px;" placeholder="Enter your text here"></textarea>
+<br />
 
-    <!--Image Size-->
-    <select id="size">
-        <option selected>256x256</option>
-        <option>512x512</option>
-    </select>
+<!-- Input for desired number of images -->
+<input type="number" value="1" placeholder="Enter quantity" id="quantity" />
 
-    <input type="number" value="1" placeholder="Images Required" id="quantity"/>
+<!--Combobox for the desired image size-->
+<select id="sel">
+    <option selected>256x256</option>
+    <option>512x512</option>
+    <option>1024x1024</option>
+</select>
 
-    <!--Generate button-->
-    <button id="generate">Generate</button>
-    <br />
-
-    <div id="ImageDisplay" class="col-md-14 row"></div>
+<!--Generate button-->
+<button id="btn">
+    Generate
+</button>
+<br />
+<!--div for displaying the images-->
+<div id="display" class="col-md-12 row">
 </div>

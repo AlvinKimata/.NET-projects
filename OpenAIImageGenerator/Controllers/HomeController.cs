@@ -1,26 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using OpenAIImageGenerator.Models;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using OpenAIImageGenerator.Models;
 using System.Diagnostics;
 using System.Net.Http.Headers;
-using System.Runtime.CompilerServices;
 using System.Text;
-using System.Text.Json.Serialization;
 using static OpenAIImageGenerator.Models.ImageInfo;
 
 namespace OpenAIImageGenerator.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IConfiguration _configuration;
-        string APIKEY = string.Empty;
 
-        public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
+        string APIKEY = string.Empty;
+        public HomeController(IConfiguration conf)
         {
-            _logger = logger;
-            _configuration = configuration;
-            APIKEY = configuration.GetSection("OPENAI_API_KEY").Value;
+            APIKEY = conf.GetSection("OPENAI_API_KEY").Value;
         }
 
         public IActionResult Index()
@@ -28,37 +22,36 @@ namespace OpenAIImageGenerator.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-
         [HttpPost]
         public async Task<IActionResult> GenerateImage([FromBody] HiddenInputAttribute input)
         {
-            
-            var response = new ResponseModel();
+            // create a response object
+            var resp = new ResponseModel();
             using (var client = new HttpClient())
             {
+                // clear the default headers to avoid issues
                 client.DefaultRequestHeaders.Clear();
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", APIKEY);
-                var Message = await client.PostAsync("https://api.openai.com/v1/images/generations", 
-                    new StringContent(JsonConvert.SerializeObject(input), Encoding.UTF8, "application.json"));
 
+                // add header authorization and use your API KEY
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", APIKEY);
+
+                //  call the  api using post method and set the content type to application/json
+                var Message = await client.PostAsync("https://api.openai.com/v1/images/generations",
+                    new StringContent(JsonConvert.SerializeObject(input), Encoding.UTF8, "application/json"));
+
+                // if result OK
+                // read the content and deserialize it using the Response Model
+                // then return the response object
                 if (Message.IsSuccessStatusCode)
                 {
+
                     var content = await Message.Content.ReadAsStringAsync();
-                    response = JsonConvert.DeserializeObject<ResponseModel>(content);
+                    resp = JsonConvert.DeserializeObject<ResponseModel>(content);
                 }
             }
-            return Json(response);
+
+
+            return Json(resp);
         }
-    }
-}
+    };
+};
