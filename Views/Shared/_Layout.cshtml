@@ -21,18 +21,32 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="ListUsers">List</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Create">Create</a>
                         </li>
+
+                        @if (signInManager.IsSignedIn(User) && User.IsInRole("Administrator"))
+                        {
+                            <li class="nav-item dropdown show">
+                                <a class="nav-link dropdown-toggle" role="button" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Manage</a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+                                    <a class="dropdown-item" asp-controller="Administration" asp-action="ListUsers">Users</a>
+                                    <a class="dropdown-item" asp-controller="Administration" asp-action="ListRoles">Roles</a>
+                                </div>
+
+                            </li>
+                        }
                     </ul>
 
                     @*If the user is signed in display logout link *@
                     @if (signInManager.IsSignedIn(User))
                     {
                         <link class="nav-item">
-                        <form method="post" asp-controller="home" asp-action="logout">
+                        <form method="post" asp-controller="account" asp-action="Logout">
                             <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">Logout @User.Identity.Name</button>
                         </form>
 

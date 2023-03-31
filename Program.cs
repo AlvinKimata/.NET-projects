@@ -12,7 +12,8 @@ builder.Services.AddDbContext<AppDbContext>();
 
 //Register identity services to the container.
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-     .AddEntityFrameworkStores<AppDbContext>();
+     .AddEntityFrameworkStores<AppDbContext>().
+     AddRoles<IdentityRole>();
      //.AddDefaultTokenProviders();
 
 builder.Services.AddScoped<UserManager<IdentityUser>>();

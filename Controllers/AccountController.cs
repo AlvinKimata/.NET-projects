@@ -12,12 +12,12 @@ namespace User_management.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
-        private readonly RoleManager<IdentityUser> roleManager;
+        private readonly RoleManager<IdentityRole> roleManager;
         private readonly AppDbContext _context;
 
         public AccountController(UserManager<IdentityUser> userManager,
                                  SignInManager<IdentityUser> signInManager,
-                                 RoleManager<IdentityUser> roleManager,
+                                 RoleManager<IdentityRole> roleManager,
                                  AppDbContext context)
         {
             this.userManager = userManager;
