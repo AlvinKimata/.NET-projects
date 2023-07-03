@@ -13,5 +13,10 @@ namespace WingTipToys
         {
 
         }
+        public List<CartItem> GetShoppingCartItems()
+        {
+            ShoppingCartActions actions = new ShoppingCartActions();
+            return actions.GetCartItems();
+        }
     }
 }
