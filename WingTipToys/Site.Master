@@ -87,7 +87,7 @@
                 <ItemTemplate>
                     <b style="font-size: large; font-style: normal">
                         <a href="/ProductList.aspx?id=<%#: Item.CategoryID %>">
-                            <%#: Item.CategoryName % %>
+                            <%#: Item.CategoryName %>
                         </a>
                     </b>
                 </ItemTemplate>
