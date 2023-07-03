@@ -166,6 +166,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AddToCart.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -328,6 +329,13 @@
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddToCart.aspx.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddToCart.aspx.designer.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
