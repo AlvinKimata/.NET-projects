@@ -2,7 +2,6 @@
 using System.IO;
 using Microsoft.ML;
 using Microsoft.ML.Trainers;
-using MovieRecommender;
 
 namespace MovieRecommender
 {
