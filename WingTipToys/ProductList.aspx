@@ -9,7 +9,7 @@
 
             <asp:ListView ID="productList" runat="server" 
                 DataKeyNames="ProductID" GroupItemCount="4"
-                ItemType="WingtipToys.Models.Product" SelectMethod="GetProducts">
+                ItemType="WingTipToys.Models.Product" SelectMethod="GetProducts">
                 <EmptyDataTemplate>
                     <table >
                         <tr>
