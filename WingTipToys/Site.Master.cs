@@ -76,7 +76,7 @@ namespace WingTipToys
         }
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            using (ShoppinCartActions usersShoppingCart = new ShoppingCartActions())
+            using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
             {
                 string cartStr = string.Format("Cart ({0})", usersShoppingCart.GetCount());
                 cartCount.InnerText = cartStr;

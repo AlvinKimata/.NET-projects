@@ -8,6 +8,7 @@ using WingTipToys.Models;
 using System.Collections.Specialized;
 using System.Collections;
 using System.Web.ModelBinding;
+using WingTipToys.Logic;
 
 namespace WingTipToys
 {
@@ -44,7 +45,7 @@ namespace WingTipToys
             using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
             {
                 String cartId = usersShoppingCart.GetCartId();
-                ShoppingCartACtions.ShoppingCartUpdates[] cartUpdates = new ShoppingCartACtions.ShoppingCartUpdates[CartList.Rows.Count];
+                ShoppingCartActions.ShoppingCartUpdates[] cartUpdates = new ShoppingCartActions.ShoppingCartUpdates[CartList.Rows.Count];
                 for (int i = 0; i < CartList.Rows.Count; i++)
                 {
                     IOrderedDictionary rowValues = new OrderedDictionary();
@@ -56,7 +57,7 @@ namespace WingTipToys
                     cartUpdates[i].RemoveItem = cbRemove.Checked;
 
                     TextBox quantityTextBox = new TextBox();
-                    quantityTextBox = (TextBox)CartList.Rows[i].FindControl("PurchaseQunatity");
+                    quantityTextBox = (TextBox)CartList.Rows[i].FindControl("PurchaseQuantity");
                     cartUpdates[i].PurchaseQuantity = Convert.ToInt16(quantityTextBox.Text.ToString());
                 }
                 usersShoppingCart.UpdateShoppingCartDatabase(cartId, cartUpdates);
@@ -65,7 +66,8 @@ namespace WingTipToys
                 return usersShoppingCart.GetCartItems();
             }
         }
-        public static IOrderedDictionary GetValues(GridView row)
+
+        public static IOrderedDictionary GetValues(GridViewRow row)
         {
             IOrderedDictionary values = new OrderedDictionary();
             foreach (DataControlFieldCell cell in row.Cells)
@@ -75,14 +77,13 @@ namespace WingTipToys
                     //Extract values from the cell.
                     cell.ContainingField.ExtractValuesFromCell(values, cell, row.RowState, true);
                 }
-                return values;
             }
+            return values;
 
-            protected void UpdateBtn_Click(object sender, EventArgs e)
-            {
-                UpdateCartItems();
-            }
-
+        }
+        protected void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            UpdateCartItems();
         }
     }
 }
