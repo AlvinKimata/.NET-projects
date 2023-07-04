@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WingtipToys.Checkout
+namespace WingTipToys.Checkout
 {
 
 
