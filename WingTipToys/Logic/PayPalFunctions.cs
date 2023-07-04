@@ -14,11 +14,11 @@ using System.Linq;
 
 public class NVPAPICaller
 {
-    //Flag that determines tue paypal environment.
+    //Flag that determines the PayPal environment (live or sandbox)
     private const bool bSandbox = true;
     private const string CVV2 = "CVV2";
 
-    //Live strings.
+    // Live strings.
     private string pEndPointURL = "https://api-3t.paypal.com/nvp";
     private string host = "www.paypal.com";
 
@@ -30,20 +30,23 @@ public class NVPAPICaller
     private const string PWD = "PWD";
     private const string ACCT = "ACCT";
 
-    //Set username, password and signature in an environment variable.
-    public string APIUsername = Environment.GetEnvironmentVariable("APIUsername");
-    private string APIPasword = Environment.GetEnvironmentVariable("APIPassword");
-    private string APISignature = Environment.GetEnvironmentVariable("Signature");
+    //Replace <Your API Username> with your API Username
+    //Replace <Your API Password> with your API Password
+    //Replace <Your Signature> with your Signature
+    public string APIUsername = "<Your API Username>";
+    private string APIPassword = "<Your API Password>";
+    private string APISignature = "<Your Signature>";
     private string Subject = "";
     private string BNCode = "PP-ECWizard";
 
-    //HttpWebRequest Timeout specified in milliseconds.
+    //HttpWebRequest Timeout specified in milliseconds 
     private const int Timeout = 15000;
     private static readonly string[] SECURED_NVPS = new string[] { ACCT, CVV2, SIGNATURE, PWD };
-    private void SetCredentials(string UserId, string Pwd, string Signature)
+
+    public void SetCredentials(string Userid, string Pwd, string Signature)
     {
-        APIUsername = UserId;
-        APIPasword = Pwd;
+        APIUsername = Userid;
+        APIPassword = Pwd;
         APISignature = Signature;
     }
 
@@ -54,6 +57,7 @@ public class NVPAPICaller
             pEndPointURL = pEndPointURL_SB;
             host = host_SB;
         }
+
         string returnURL = "https://localhost:44391/Checkout/CheckoutReview.aspx";
         string cancelURL = "https://localhost:44391/Checkout/CheckoutCancel.aspx";
 
@@ -65,25 +69,28 @@ public class NVPAPICaller
         encoder["PAYMENTREQUEST_0_AMT"] = amt;
         encoder["PAYMENTREQUEST_0_ITEMAMT"] = amt;
         encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Sale";
-        encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "KES";
+        encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "USD";
 
-        //Get the shopping cart products.
+        // Get the Shopping Cart Products
         using (WingTipToys.Logic.ShoppingCartActions myCartOrders = new WingTipToys.Logic.ShoppingCartActions())
         {
             List<CartItem> myOrderList = myCartOrders.GetCartItems();
-            for (InfiniteTimeSpanConverter = 0; i < myOrderList.Count; i++){
+
+            for (int i = 0; i < myOrderList.Count; i++)
+            {
                 encoder["L_PAYMENTREQUEST_0_NAME" + i] = myOrderList[i].Product.ProductName.ToString();
                 encoder["L_PAYMENTREQUEST_0_AMT" + i] = myOrderList[i].Product.UnitPrice.ToString();
                 encoder["L_PAYMENTREQUEST_0_QTY" + i] = myOrderList[i].Quantity.ToString();
             }
         }
+
         string pStrrequestforNvp = encoder.Encode();
         string pStresponsenvp = HttpCall(pStrrequestforNvp);
 
         NVPCodec decoder = new NVPCodec();
-        decoder.DEcode(pStresponsenvp);
+        decoder.Decode(pStresponsenvp);
 
-        string strAck = decoder["ACK"].TOLower();
+        string strAck = decoder["ACK"].ToLower();
         if (strAck != null && (strAck == "success" || strAck == "successwithwarning"))
         {
             token = decoder["TOKEN"];
@@ -94,42 +101,12 @@ public class NVPAPICaller
         else
         {
             retMsg = "ErrorCode=" + decoder["L_ERRORCODE0"] + "&" +
-          "Desc=" + decoder["L_SHORTMESSAGE0"] + "&" +
-          "Desc2=" + decoder["L_LONGMESSAGE0"];
+                "Desc=" + decoder["L_SHORTMESSAGE0"] + "&" +
+                "Desc2=" + decoder["L_LONGMESSAGE0"];
             return false;
         }
     }
-    public bool GetCheckoutDetails(string token, ref string payerID, ref NVPCodec decoder, ref string retMsg)
-    {
-        if (bSandbox)
-        {
-            pEndPointURL = pEndPointURL_SB;
-        }
-        NVPCodec encoder = new NVPCodec();
-        encoder["METHOD"] = "GetExpressCheckoutDetails";
-        encoder["TOKEN"] = token;
 
-        string pStrrequestfornvp = encoder.Encode();
-        string pStrresponsenvp = HttpCall(pStrrequestfornvp);
-
-        decodeer = new NVPCodec();
-        decoder.Decode(pStresponsenvp);
-
-        string strAck = decoder["ACK"].ToLower();
-        if (strAck != null && (strAck == "success" || strAck == "successwithwarning"))
-        {
-            payerID = decoder["PAYERID"];
-            return true;
-        }
-        else
-        {
-            retMsg = "ErrorCode=" + decoder["L_ERRORCODE0"] + "&" +
-          "Desc=" + decoder["L_SHORTMESSAGE0"] + "&" +
-          "Desc2=" + decoder["L_LONGMESSAGE0"];
-
-            return false;
-        }
-    }
     public bool GetCheckoutDetails(string token, ref string PayerID, ref NVPCodec decoder, ref string retMsg)
     {
         if (bSandbox)
@@ -162,18 +139,20 @@ public class NVPAPICaller
             return false;
         }
     }
-    public bool DoCheckoutPayment(string finalPaymentAmount, string token, string PayerID, ref NVPCodec decoder, ref sttring retMsg)
+
+    public bool DoCheckoutPayment(string finalPaymentAmount, string token, string PayerID, ref NVPCodec decoder, ref string retMsg)
     {
         if (bSandbox)
         {
             pEndPointURL = pEndPointURL_SB;
         }
+
         NVPCodec encoder = new NVPCodec();
         encoder["METHOD"] = "DoExpressCheckoutPayment";
         encoder["TOKEN"] = token;
         encoder["PAYERID"] = PayerID;
         encoder["PAYMENTREQUEST_0_AMT"] = finalPaymentAmount;
-        encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "KES";
+        encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "USD";
         encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Sale";
 
         string pStrrequestforNvp = encoder.Encode();
@@ -183,26 +162,28 @@ public class NVPAPICaller
         decoder.Decode(pStresponsenvp);
 
         string strAck = decoder["ACK"].ToLower();
-        if (strAck != null && strAck == "success" || strAck == "successwithwarning")
+        if (strAck != null && (strAck == "success" || strAck == "successwithwarning"))
         {
             return true;
         }
         else
         {
             retMsg = "ErrorCode=" + decoder["L_ERRORCODE0"] + "&" +
-          "Desc=" + decoder["L_SHORTMESSAGE0"] + "&" +
-          "Desc2=" + decoder["L_LONGMESSAGE0"];
+                "Desc=" + decoder["L_SHORTMESSAGE0"] + "&" +
+                "Desc2=" + decoder["L_LONGMESSAGE0"];
 
             return false;
         }
     }
+
     public string HttpCall(string NvpRequest)
     {
         string url = pEndPointURL;
+
         string strPost = NvpRequest + "&" + buildCredentialsNVPString();
         strPost = strPost + "&BUTTONSOURCE=" + HttpUtility.UrlEncode(BNCode);
 
-        HttpWebRequest objRequest = (HttpRequest)WebRequest.Create(url);
+        HttpWebRequest objRequest = (HttpWebRequest)WebRequest.Create(url);
         objRequest.Timeout = Timeout;
         objRequest.Method = "POST";
         objRequest.ContentLength = strPost.Length;
@@ -216,24 +197,27 @@ public class NVPAPICaller
         }
         catch (Exception)
         {
-            //Log exceptions.
+            // No logging for this tutorial.
         }
 
-        //Retrieve the response returned from the NVP API call to PayPal.
+        //Retrieve the Response returned from the NVP API call to PayPal.
         HttpWebResponse objResponse = (HttpWebResponse)objRequest.GetResponse();
         string result;
-        using (StreamReader sr  = new StreamReader(objResponse.GetResponseStream()))
+        using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
         {
             result = sr.ReadToEnd();
         }
+
         return result;
     }
+
     private string buildCredentialsNVPString()
     {
         NVPCodec codec = new NVPCodec();
 
         if (!IsEmpty(APIUsername))
             codec["USER"] = APIUsername;
+
         if (!IsEmpty(APIPassword))
             codec[PWD] = APIPassword;
 
@@ -253,7 +237,6 @@ public class NVPAPICaller
         return s == null || s.Trim() == string.Empty;
     }
 }
-
 
 public sealed class NVPCodec : NameValueCollection
 {
