@@ -130,5 +130,36 @@ public class NVPAPICaller
             return false;
         }
     }
+    public bool GetCheckoutDetails(string token, ref string PayerID, ref NVPCodec decoder, ref string retMsg)
+    {
+        if (bSandbox)
+        {
+            pEndPointURL = pEndPointURL_SB;
+        }
 
+        NVPCodec encoder = new NVPCodec();
+        encoder["METHOD"] = "GetExpressCheckoutDetails";
+        encoder["TOKEN"] = token;
+
+        string pStrrequestforNvp = encoder.Encode();
+        string pStresponsenvp = HttpCall(pStrrequestforNvp);
+
+        decoder = new NVPCodec();
+        decoder.Decode(pStresponsenvp);
+
+        string strAck = decoder["ACK"].ToLower();
+        if (strAck != null && (strAck == "success" || strAck == "successwithwarning"))
+        {
+            PayerID = decoder["PAYERID"];
+            return true;
+        }
+        else
+        {
+            retMsg = "ErrorCode=" + decoder["L_ERRORCODE0"] + "&" +
+                "Desc=" + decoder["L_SHORTMESSAGE0"] + "&" +
+                "Desc2=" + decoder["L_LONGMESSAGE0"];
+
+            return false;
+        }
+    }
 }
