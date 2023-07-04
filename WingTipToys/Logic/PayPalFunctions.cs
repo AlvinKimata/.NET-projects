@@ -162,4 +162,38 @@ public class NVPAPICaller
             return false;
         }
     }
+    public bool DoCheckoutPayment(string finalPaymentAmount, string token, string PayerID, ref NVPCodec decoder, ref sttring retMsg)
+    {
+        if (bSandbox)
+        {
+            pEndPointURL = pEndPointURL_SB;
+        }
+        NVPCodec encoder = new NVPCodec();
+        encoder["METHOD"] = "DoExpressCheckoutPayment";
+        encoder["TOKEN"] = token;
+        encoder["PAYERID"] = PayerID;
+        encoder["PAYMENTREQUEST_0_AMT"] = finalPaymentAmount;
+        encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "KES";
+        encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Sale";
+
+        string pStrrequestforNvp = encoder.Encode();
+        string pStresponsenvp = HttpCall(pStrrequestforNvp);
+
+        decoder = new NVPCodec();
+        decoder.Decode(pStresponsenvp);
+
+        string strAck = decoder["ACK"].ToLower();
+        if (strAck != null && strAck == "success" || strAck == "successwithwarning")
+        {
+            return true;
+        }
+        else
+        {
+            retMsg = "ErrorCode=" + decoder["L_ERRORCODE0"] + "&" +
+          "Desc=" + decoder["L_SHORTMESSAGE0"] + "&" +
+          "Desc2=" + decoder["L_LONGMESSAGE0"];
+
+            return false;
+        }
+    }
 }
