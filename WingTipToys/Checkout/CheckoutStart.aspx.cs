@@ -15,7 +15,7 @@ namespace WingTipToys.Checkout
             string retMsg = "";
             string token = "";
 
-            if (Session["payment-amt"] != null)
+            if (Session["payment_amt"] != null)
             {
                 string amt = Session["payment_amt"].ToString();
                 bool ret = payPalCaller.ShortcutExpressCheckout(amt, ref token, ref retMsg);
