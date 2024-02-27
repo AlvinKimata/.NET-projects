@@ -1,0 +1,8 @@
+namespace SignalIR_and_Quartz.Models;
+
+public class ErrorViewModel
+{
+    public string? RequestId { get; set; }
+
+    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+}
